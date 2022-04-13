@@ -46,3 +46,17 @@ champ2.addEventListener("blur", (event) => {
 /*******************************************************************************************/
 // Exercice 5 :
 
+const btn = document.getElementById("btn");
+const resultat = document.getElementById("resultat");
+
+
+function calHyp(adjacent, opposé) {
+    return Math.pow(adjacent, 2) + Math.pow(opposé, 2);
+}
+
+btn.addEventListener("click", () => {
+    let valAdjacent = Math.floor(document.getElementById("adjacent").value);
+    let valOpposé = Math.floor(document.getElementById("opposé").value);
+
+    resultat.innerHTML = `L'hypoténuse est égal à ${calHyp(valAdjacent, valOpposé)}`
+})
